@@ -1,0 +1,35 @@
+Product:
+  xx3drumkit:
+    Title: XX3 Drum Kit
+    Price: 2000
+  blastodrums:
+    Title: Blasto Drum Kit 2014
+    Price: 3000
+  nonamedrums:
+    Title: NoName Drum Set
+    Price: 600
+  zildjianride:
+    Title: Zildjain sweet ride
+    Price: 550
+  sabian12crash:
+    Title: Sabian 12inch crash
+    Price: 230
+
+LogicalOrRuleCondition:
+  drumsorcymbals:
+    Blah: x
+
+ProductPresentRuleCondition:
+  drums:
+    Products: =>Product.xx3drumkit,=>Product.blastodrums
+    Parent: =>LogicalOrRuleCondition.drumsorcymbals
+  cymbals:
+    Products: =>Product.zildjianride
+    Parent: =>LogicalOrRuleCondition.drumsorcymbals
+
+Rule:
+  tenpcoffdrumsorcymbals:
+    Title: 10% off selected drum kits or cymbals
+    Active: 1
+    Condition: =>LogicalOrRuleCondition.drumsorcymbals
+  
