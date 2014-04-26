@@ -1,6 +1,6 @@
 {
 	"name" : "burnbright/silverstripe-rules",
-	"description" : "SilerStripe DB-driven rules engine, for user created buisiness rules.",
+	"description" : "SilerStripe DB-driven rules engine, for user-created business rules.",
 	"license" : "BSD-2-Clause",
 	"type" : "silverstripe-module",
 	"keywords" : ["silverstripe","rules","business logic"],
